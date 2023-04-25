@@ -5,6 +5,7 @@
 <p><strong>Name:</strong><%=@pet.name %> </p>
 <p><strong>Id:</strong><%=@pet.id %> </p>
 <p><strong>Breed:</strong><%=@pet.breed %> </p>
+<p><strong>user id:</strong> <%= @pet.user && @pet.user.name %><p>
 <img src="<%= @pet.image %>" />
 
 

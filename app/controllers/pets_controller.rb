@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   def index
+    p current_user
     @pets = Pet.all
     render :index
   end
@@ -15,7 +16,8 @@ class PetsController < ApplicationController
       name: params[:pet][:name],
       id: params[:pet][:id],
       breed: params[:pet][:breed],
-      image: params[:pet][:image]
+      image: params[:pet][:image],
+      user_id: current_user.id
     )
     @pet.save
     redirect_to "/pets/#{@pet.id}"
