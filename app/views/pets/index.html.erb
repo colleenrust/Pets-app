@@ -1,0 +1,11 @@
+<center><h1 style="color:Tomato">Pet Index </h1></center>
+
+<body style="background-color:aquamarine;">
+<% @pets.each do |pet| %>
+  <p><strong>Id:</strong> <%= pet.id %><p>
+  <a href="/pets/<%= pet.id %>">More Info</a>
+  <p><strong>Name:</strong> <%= pet.name %><p>
+  <p><strong>Breed:</strong> <%= pet.breed %><p>
+  <img src="<%= pet.image %>" />
+  <hr />
+<% end %>

@@ -1,0 +1,14 @@
+<body style="background-color:SlateBlue;">
+
+
+<h1 style="color:Tomato">  SINGULAR PET  </h1>
+<p><strong>Name:</strong><%=@pet.name %> </p>
+<p><strong>Id:</strong><%=@pet.id %> </p>
+<p><strong>Breed:</strong><%=@pet.breed %> </p>
+<img src="<%= @pet.image %>" />
+
+
+
+<a href="/pets/<%= @pet.id %>/edit">Edit pet</a>
+<a href="/pets/<%= @pet.id %>" data-turbo-method="delete">Remove pet</a>
+
