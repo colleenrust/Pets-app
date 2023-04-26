@@ -8,8 +8,7 @@
 <p><strong>user id:</strong> <%= @pet.user && @pet.user.name %><p>
 <img src="<%= @pet.image %>" />
 
+<a class="btn btn-primary" href="/pets/<%= @pet.id %>/edit">Edit pet</a>
+<a class="btn btn-primary" href="/pets/<%= @pet.id %>" data-turbo-method="delete">Remove pet</a>
 
-
-<a href="/pets/<%= @pet.id %>/edit">Edit pet</a>
-<a href="/pets/<%= @pet.id %>" data-turbo-method="delete">Remove pet</a>
 
